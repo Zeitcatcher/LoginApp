@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonPressed() {
         guard loginTextField.text == userName, passwordTextField.text == password else {
-            errorAlert(with: "Ups", message: "Login or Password incorrect", textField: passwordTextField)
+            showAlert(with: "Ups", message: "Login or Password incorrect", textField: passwordTextField)
             return
         }
         
@@ -26,8 +26,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotLoginData(_ sender: UIButton) {
         sender.tag == 0
-            ? errorAlert(with: "Ups", message: "Your username is: \(userName)")
-            : errorAlert(with: "Ups", message: "Your password is: \(password)")
+            ? showAlert(with: "Ups", message: "Your username is: \(userName)")
+            : showAlert(with: "Ups", message: "Your password is: \(password)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
 // MARRK: AlertController
 
 extension LoginViewController {
-    private func errorAlert(with title: String, message: String, textField: UITextField? = nil) {
+    private func showAlert(with title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             textField?.text = ""
