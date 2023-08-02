@@ -16,9 +16,9 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nameLabel.text = user.person.name
-        infoLabel.text = user.person.hobbies
+        view.addVerticalGradienLayer()
+        nameLabel.text = user.person.fullName
+        infoLabel.text = "\(user.person.hobbies) - \(user.person.job.jobTitle)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

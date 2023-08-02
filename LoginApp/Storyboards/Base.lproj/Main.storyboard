@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
         </scene>
-        <!--WelcomeVC-->
+        <!--Welcome Screen-->
         <scene sceneID="BWf-3Z-XPg">
             <objects>
                 <viewController id="IAp-xo-AR1" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ha ha😁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZn-bx-hsl">
-                                <rect key="frame" x="163" y="221" width="67.333333333333314" height="21"/>
+                                <rect key="frame" x="163" y="221" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,7 +132,7 @@
                             <constraint firstItem="AZn-bx-hsl" firstAttribute="centerX" secondItem="3SR-UO-N5K" secondAttribute="centerX" id="vHP-GI-9n6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WelcomeVC" image="1.circle.fill" catalog="system" id="Oy6-MT-Kzw"/>
+                    <tabBarItem key="tabBarItem" title="Welcome Screen" image="1.circle.fill" catalog="system" id="Oy6-MT-Kzw"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="zim-o6-ynt" id="TDt-6S-cOm"/>
                     </connections>
@@ -199,22 +199,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-DF-9sX">
-                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="6Jf-xc-zot">
+                                <rect key="frame" x="76.666666666666686" y="244.33333333333334" width="240" height="363.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5A4-Z3-ZVN">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="db4-wJ-NzP"/>
+                                            <constraint firstAttribute="height" constant="240" id="vOu-X8-ata"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-DF-9sX">
+                                        <rect key="frame" x="99.333333333333329" y="343" width="41.333333333333329" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Si7-MR-MrX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iM3-DF-9sX" firstAttribute="centerY" secondItem="dnu-fk-iWo" secondAttribute="centerY" id="Zwx-CE-hg4"/>
-                            <constraint firstItem="iM3-DF-9sX" firstAttribute="centerX" secondItem="dnu-fk-iWo" secondAttribute="centerX" id="m3Q-2t-fAo"/>
+                            <constraint firstItem="6Jf-xc-zot" firstAttribute="centerY" secondItem="dnu-fk-iWo" secondAttribute="centerY" id="1FC-Lg-13A"/>
+                            <constraint firstItem="6Jf-xc-zot" firstAttribute="centerX" secondItem="dnu-fk-iWo" secondAttribute="centerX" id="NsW-m5-gaE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z7C-xj-x51"/>
                     <connections>
+                        <outlet property="photoImage" destination="5A4-Z3-ZVN" id="e1n-i0-b5N"/>
                         <outlet property="photoLabel" destination="iM3-DF-9sX" id="1m9-qS-fJE"/>
                     </connections>
                 </viewController>
@@ -243,7 +256,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ztA-tT-Gy2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CGf-28-y9X" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CGf-28-y9X" customClass="TabBarController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uaI-p9-6ve">
                         <autoresizingMask key="autoresizingMask"/>
@@ -258,11 +271,11 @@
             </objects>
             <point key="canvasLocation" x="1844" y="-730"/>
         </scene>
-        <!--InfoVC-->
+        <!--Info Screen-->
         <scene sceneID="jAV-MC-gbz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TW3-Ei-fpi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="InfoVC" image="2.circle.fill" catalog="system" id="lkt-9S-ywp"/>
+                    <tabBarItem key="tabBarItem" title="Info Screen" image="2.circle.fill" catalog="system" id="lkt-9S-ywp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tcx-JK-b0X">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
