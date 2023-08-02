@@ -15,6 +15,8 @@
 		D976B18C2A78AC8E009A2B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D976B18A2A78AC8E009A2B0C /* LaunchScreen.storyboard */; };
 		D976B1942A78ACD6009A2B0C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1932A78ACD6009A2B0C /* WelcomeViewController.swift */; };
 		D976B1962A79E734009A2B0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1952A79E734009A2B0C /* User.swift */; };
+		D976B1982A79EE37009A2B0C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1972A79EE37009A2B0C /* InfoViewController.swift */; };
+		D976B19E2A79F6FF009A2B0C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B19D2A79F6FF009A2B0C /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D976B18D2A78AC8E009A2B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D976B1932A78ACD6009A2B0C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D976B1952A79E734009A2B0C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D976B1972A79EE37009A2B0C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D976B19D2A79F6FF009A2B0C /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				D976B1952A79E734009A2B0C /* User.swift */,
 				D976B1932A78ACD6009A2B0C /* WelcomeViewController.swift */,
 				D976B1852A78AC8E009A2B0C /* Main.storyboard */,
+				D976B19D2A79F6FF009A2B0C /* PhotoViewController.swift */,
+				D976B1972A79EE37009A2B0C /* InfoViewController.swift */,
 				D976B1882A78AC8E009A2B0C /* Assets.xcassets */,
 				D976B18A2A78AC8E009A2B0C /* LaunchScreen.storyboard */,
 				D976B18D2A78AC8E009A2B0C /* Info.plist */,
@@ -148,6 +154,8 @@
 				D976B1942A78ACD6009A2B0C /* WelcomeViewController.swift in Sources */,
 				D976B1802A78AC8E009A2B0C /* AppDelegate.swift in Sources */,
 				D976B1962A79E734009A2B0C /* User.swift in Sources */,
+				D976B19E2A79F6FF009A2B0C /* PhotoViewController.swift in Sources */,
+				D976B1982A79EE37009A2B0C /* InfoViewController.swift in Sources */,
 				D976B1822A78AC8E009A2B0C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
